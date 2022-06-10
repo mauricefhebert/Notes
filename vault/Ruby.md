@@ -79,3 +79,9 @@ The global variable is defined globally and can be use anywhere in the programme
 ```Ruby
 $name = value
 ```
+
+## Input and Output
+
+### Input
+
+### Output
