@@ -2,7 +2,7 @@
 id: 2kng5xh5ujuy2kf2cjnq6sw
 title: Ruby Basic
 desc: ""
-updated: 1654878364352
+updated: 1654878496028
 created: 1654706632466
 ---
 
@@ -31,8 +31,10 @@ within the bloIk of its initialization.
 Once the code block completes,
 variable has no scope
 <br>
-`name = value`
-<br>
+
+```Ruby
+name = value
+```
 
 ### Class variables
 
@@ -47,7 +49,10 @@ A class variable is shared by all the
 descendent of the class. An uninitialized
 class variable will result in an error
 <br>
-`@@name = value`
+
+```Ruby
+@@name = value
+```
 
 ### Instance variables
 
@@ -61,10 +66,16 @@ They don't need to be initialize. An
 uninitialized instance variable will have
 a nil value
 <br>
-`@name = value`
+
+```Ruby
+@name = value
+```
 
 ### Global variables
 
 The global variable is defined globally and can be use anywhere in the programme this type of variable is generally avoided
 <br>
-`$name = value`
+
+```Ruby
+$name = value
+```
