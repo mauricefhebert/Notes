@@ -1,8 +1,8 @@
 ---
 id: at3kggd6v9qbfzjgdaaonfp
-title: ADO.NET
+title: AdoNet
 desc: ""
-updated: 1654882233572
+updated: 1654884047295
 created: 1654882166779
 ---
 
