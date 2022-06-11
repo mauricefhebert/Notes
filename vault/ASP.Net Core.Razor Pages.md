@@ -2,7 +2,7 @@
 id: h6bbbjw9gdt8d3f7j83wln9
 title: Razor Pages
 desc: ""
-updated: 1654915075957
+updated: 1654967793920
 created: 1654907162498
 ---
 
@@ -97,6 +97,117 @@ The `appSettings.json` and `appSettings.Development.json` is used to store some 
 
 This is the entry point of your application this is where you will manage all your service and dependencies injection. This is where you will manage the pipeline and middleware
 
+### The ViewImports.cshtml file
+
+The ViewImports fill is used to add some using, namespace and addTagHelper to be used across multiple page without having to add them to each page
+
+# Working with razor pages
+
+## Basic syntax
+
+Here i will give a quick syntax reference
+
+> Everything that start with an @ is consider to be some service-side code (C#) until a html tag is encounter
+
+### Variable declaring
+
+```cshtml
+@{
+    string str = "Hello, World"
+    int x = 5;
+}
+```
+
+### If else statement
+
+```cshtml
+@if(condition)
+{
+    //Do something here
+}
+else if(Second condition)
+{
+    //Do something here
+}
+else
+{
+    //Do something here
+}
+```
+
+### Switch
+
+```cshtml
+@switch (variable)
+{
+    case n _ when condition
+        //Do something here
+        break;
+    case n _ when condition
+        //Do something here
+        break;
+    default:
+        //Do something here
+        break;
+}
+```
+
+### Tenary operator
+
+```cshtml
+@(condition ? value_if_true : value_if_false)
+
+//You can also combine it in a class, id, link definition
+<a class="@(User.Identity.IsAuthenticated ? "auth" : "anon")">My link here</a>
+```
+
+### Loop
+
+```cshtml
+@foreach(var x in collection)
+{
+    //Do something here
+}
+
+@for(int i = 0; i < collection.length; i++)
+{
+    //Do something here
+}
+```
+
+### Output entity code
+
+```cshtml
+@{
+    var output = "<p>This is a paragraph the p tag will be convert to entity code</p>"
+}
+
+@output
+```
+
+## The file
+
+## The .cshtml file
+
+Here is an example the page file that we will break down below
+
+```cshtml
+@page
+@model WebApplication1.Pages.WelcomeModel
+@using
+@{
+    //C# code goes here
+}
+```
+
+The `@page` declaration is always the first line of a .cshtml file it's use to mark the page as a navigable page.
+<br>
+The `@model WebApplication1.Pages.WelcomeModel` is used to declare what is data model of the page by default this is set to be the ViewModel that is created at the same time as the page.
+<br>
+The `@using` allow the adding of additional namespace
+<br>
+The `@{...}` is where you can add some C# code anything between the bracket is pure C# code this should be keep to a minimum
+
 <!-- Tag helper section -->
 
 ## Tag Helper Reference Sheet
@@ -105,3 +216,7 @@ This is the entry point of your application this is where you will manage all yo
 | ---------- | ------------------------------ |
 | asp-page   | Use to navigate to a page      |
 | asp-for    | Create a name and id attribute |
+
+```
+
+```
