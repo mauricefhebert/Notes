@@ -74,7 +74,7 @@ preview:
   enableFrontmatterTags: true
   enableHashesForFMTags: false
 publishing:
-  theme: custom
+  theme: dark
   enableFMTitle: true
   enableNoteTitleForLink: true
   enableMermaid: true
