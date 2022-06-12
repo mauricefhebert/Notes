@@ -2,7 +2,7 @@
 id: h6bbbjw9gdt8d3f7j83wln9
 title: Razor Pages
 desc: ""
-updated: 1654967793920
+updated: 1654970639289
 created: 1654907162498
 ---
 
@@ -207,6 +207,8 @@ The `@model WebApplication1.Pages.WelcomeModel` is used to declare what is data 
 The `@using` allow the adding of additional namespace
 <br>
 The `@{...}` is where you can add some C# code anything between the bracket is pure C# code this should be keep to a minimum
+
+## The PageModel
 
 <!-- Tag helper section -->
 
